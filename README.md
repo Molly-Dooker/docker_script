@@ -1,6 +1,6 @@
 # cuda 도커 빌드
 ```
-docker build -f dockerfile -t cuda_default:v1.0 .
+docker build -f cuda_dockerfile -t cuda_default:v1.0 .
 ```
 
 
