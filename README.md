@@ -10,4 +10,7 @@ docker build -f cuda12.5_dockerfile -t cuda_12.5:v1.0 .
 ```
 docker build -f torch_dockerfile -t torch_default:v1.0 .
 ```
-
+### ubuntu base image
+```
+docker build -f ubuntu_dockerfile -t ubuntu:22.04 .
+```
