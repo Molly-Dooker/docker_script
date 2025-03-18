@@ -1,9 +1,16 @@
 FROM nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
+ENV DEBIAN_FRONTEND=noninteractive
+# 기본 업데이트 및 업그레이드, 그리고 필요한 도구 설치
+RUN apt-get update -y && apt-get upgrade -y && \
+    apt-get install -y sudo software-properties-common git vim cmake
 
-RUN apt-get update -y
-RUN apt-get upgrade -y
-RUN apt-get install -y sudo
-RUN apt-get install -y git
-RUN apt-get install -y vim
+# Python3.10과 pip, venv는 기본으로 설치 (이미 기본에 있을 수도 있음)
 RUN apt-get install -y python3.10 python3.10-venv python3-pip
-RUN apt-get install -y cmake
+
+# deadsnakes PPA를 추가하여 Python 3.11 설치 (기본 python3는 변경하지 않음)
+RUN add-apt-repository ppa:deadsnakes/ppa -y && \
+    apt-get update -y && \
+    apt-get install -y python3.11 python3.11-venv python3.11-dev
+
+RUN apt-get update -y && apt-get upgrade -y && \
+    apt-get install -y curl wget jq

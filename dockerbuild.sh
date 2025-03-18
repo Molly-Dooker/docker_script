@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define environment variables
-docker_image_name="cuda:12.4.1"
-docker_container_name="sungmin_12.4.1"
+docker_image_name="sungmin:v1.0"
+docker_container_name="sungmin_1.0"
 DATADIR=/Data/Dataset
 
 docker stop ${docker_container_name} 2>/dev/null && docker rm ${docker_container_name} 2>/dev/null

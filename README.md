@@ -9,7 +9,7 @@ docker build -f cuda12.5_dockerfile -t cuda_12.5:v1.0 .
 
 ### cuda 12.4.1 image
 ```
-docker build -f cuda12.4.1_dockerfile -t cuda:12.4.1_ver2 .
+docker build -f cuda12.4.1_dockerfile -t sungmin:v1.0 .
 ```
 
 ### cuda 11.3.1 image
