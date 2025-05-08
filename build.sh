@@ -5,7 +5,7 @@ docker_image_name="sungmin:v1.0"
 docker_container_name="sungmin_1.0"
 DATADIR=/Data/Dataset
 
-docker stop ${docker_container_name} 2>/dev/null && docker rm ${docker_container_name} 2>/dev/null
+docker rm -f ${docker_container_name} 2>/dev/null
 
 
 
