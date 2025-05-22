@@ -1,13 +1,11 @@
 #!/bin/bash
 
 # Define environment variables
-docker_image_name="sungmin:v1.0"
-docker_container_name="sungmin_1.0"
+docker_image_name="sungmin:v2.0"
+docker_container_name="sungmin_2.0"
 DATADIR=/Data/Dataset
 
 docker rm -f ${docker_container_name} 2>/dev/null
-
-
 
 # Docker run command  
 docker run -it \
@@ -24,3 +22,6 @@ docker run -it \
     --ipc=host \
     --hostname ${docker_container_name} \
     ${docker_image_name}
+
+    # -p 8080:8080 \
+    # -p 5000:5000 \
