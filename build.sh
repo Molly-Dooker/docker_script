@@ -21,7 +21,7 @@ docker run -it \
     --shm-size=128g \
     --ipc=host \
     --hostname ${docker_container_name} \
-    ${docker_image_name}
+    ${docker_image_name} /bin/bash
 
     # -p 8080:8080 \
     # -p 5000:5000 \
